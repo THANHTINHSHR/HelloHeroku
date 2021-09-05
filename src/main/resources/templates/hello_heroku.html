@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Hello heroku</title>
 </head>
 <body>
 <h3>Hello Heroku, First deploy demo</h3>
+<img th:src="@{/img/20210725020506BRETT YOUNG.PNG}">
+<th:block th:each="demo : ${demoList}">
+    <p th:text="${demo.getContent()}"></p>
+
+
+</th:block>
+<p > <a th:href="@{/other-page}" >Other page</a></p>
 </body>
 </html>
